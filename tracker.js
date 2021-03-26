@@ -32,7 +32,7 @@ function checkSession()
 
     timeNow = time.getTime();
 
-    if (endtime <= timeNow)
+    if (endTime <= timeNow)
     {
         console.log("faerdig!");
         web.soff();
