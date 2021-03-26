@@ -67,7 +67,7 @@ async function predict() {
 function squat(){
     for (let i = 0; i <= prediction.length; i++) {
     
-        if (prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
+        if (window.prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
             squatStaaendeCheck = true
         }
 
