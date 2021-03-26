@@ -25,6 +25,7 @@ function checkSession()
 {
     if (endTime == undefined)
     {
+        console.log("nej");
         return;
     }
 
