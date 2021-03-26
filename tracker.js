@@ -23,6 +23,11 @@ function startSession()
 
 function checkSession()
 {
+    if (endTime == undefined)
+    {
+        return;
+    }
+
     if (endtime == time.getTime())
     {
         console.log("faerdig!");
