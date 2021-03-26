@@ -15,7 +15,7 @@ function startSession()
         return;
     }
 
-    let startTime = time.getTime();
+    let startTime = Date.now();
     endTime = startTime + points * 10000;
     console.log(endTime);
 
@@ -30,7 +30,7 @@ function checkSession()
         return;
     }
 
-    timeNow = time.getTime();
+    timeNow = Date.now();
 
     if (endTime <= timeNow)
     {
