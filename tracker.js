@@ -9,7 +9,7 @@ function updatePoints()
 
 function startSession()
 {
-    if (points == 0)
+    if (points == 0 || points == undefined)
     {
         console.log("Du har ikke nok point!");
         return;
