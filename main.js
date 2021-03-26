@@ -11,7 +11,6 @@ let squatStaaendeCheck = false
 let squatCheck = false
 
 async function init() {
-    web.test();
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
 
