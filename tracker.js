@@ -17,6 +17,7 @@ function startSession()
 
     let startTime = time.getTime();
     endTime = startTime + points * 10000;
+    console.log(endTime);
 
     web.son();
 }
@@ -29,7 +30,9 @@ function checkSession()
         return;
     }
 
-    if (endtime == time.getTime())
+    timeNow = time.getTime();
+
+    if (endtime <= timeNow)
     {
         console.log("faerdig!");
         web.soff();
