@@ -16,7 +16,7 @@ function startSession()
     }
 
     let startTime = time.getTime();
-    let endTime = startTime + points * 10000;
+    endTime = startTime + points * 10000;
 
     web.son();
 }
