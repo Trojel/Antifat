@@ -8,7 +8,7 @@ let web = new Web();
 let squatCount = 0;
 let squatSiddendeCheck = false
 let squatStaaendeCheck = false
-let squatCheck = false
+let squatCheck = false;
 
 async function init() {
     const modelURL = URL + "model.json";
@@ -43,6 +43,7 @@ async function loop(timestamp) {
     webcam.update(); // update the webcam frame
     await predict();
     window.requestAnimationFrame(loop);
+    checkSession()
 }
 
 async function predict() {
@@ -64,34 +65,7 @@ async function predict() {
     drawPose(pose);
 }
 
-function squat(){
-    for (let i = 0; i < prediction.length; i++) {
-    
-        if (window.prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
-            squatStaaendeCheck = true
-        }
 
-
-        if (squatStaaendeCheck && prediction[i].className == "squat siddende" && prediction[i].probability > 0.99){
-            squatStaaendeCheck = false
-            squatSiddendeCheck = true
-        }
-
-        if (squatSiddendeCheck && prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
-            squatSiddendeCheck = false;
-            if (!squatCheck){
-                squatCount += 1
-                console.log(squatCount)
-            }
-            squatCheck = true
-                
-            }
-            else
-            {
-                squatCheck = false;
-            }
-    }
-}
     
 
 
