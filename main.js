@@ -43,7 +43,7 @@ async function loop(timestamp) {
     webcam.update(); // update the webcam frame
     await predict();
     window.requestAnimationFrame(loop);
-    checkSession()
+    
 }
 
 async function predict() {
@@ -60,6 +60,7 @@ async function predict() {
         //console.log(prediction)   
     }
     squat()
+    checkSession()
 
     // finally draw the poses
     drawPose(pose);
