@@ -7,7 +7,7 @@ let model, webcam, ctx, labelContainer, maxPredictions;
 let web = new Web();
 let squatCount = 0;
 let squatSiddendeCheck = false
-let squatStåendeCheck = false
+let squatStaaendeCheck = false
 let squatCheck = false
 
 async function init() {
@@ -68,17 +68,17 @@ async function predict() {
 function squat(){
     for (let i = 0; i <= prediction.length; i++) {
     
-        if (prediction[i].className == "squat stående" && prediction[i].probability > 0.99){
-            squatStåendeCheck = true
+        if (prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
+            squatStaaendeCheck = true
         }
 
 
-        if (squatStåendeCheck && prediction[i].className == "squat siddende" && prediction[i].probability > 0.99){
-            squatStåendeCheck = false
+        if (squatStaaendeCheck && prediction[i].className == "squat siddende" && prediction[i].probability > 0.99){
+            squatStaaendeCheck = false
             squatSiddendeCheck = true
         }
 
-        if (squatSiddendeCheck && prediction[i].className == "squat stående" && prediction[i].probability > 0.99){
+        if (squatSiddendeCheck && prediction[i].className == "squat Staaende" && prediction[i].probability > 0.99){
             squatSiddendeCheck = false;
             if (!squatCheck){
                 squatCount += 1
