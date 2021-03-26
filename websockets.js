@@ -7,7 +7,7 @@ class Web
 
     test()
     {
-        fetch("127.0.0.1:1880/test")
+        fetch("http://127.0.0.1:1880/test")
         .then(data => {return data.json()})
         .then(res => {console.log(res)})
     }
