@@ -1,0 +1,40 @@
+#menu
+{
+    
+}
+
+#menu h1
+{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    
+
+}
+
+#startSession
+{    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+
+#startTraining
+{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,40%);
+}
+
+@keyframes animation{
+    100%{
+        box-shadow: 0px 0px 50px 20px rgba(199, 239, 255, 0);
+    }
+    }
+
+.menuBtn:focus{
+    color: rgb(82, 166, 199);
+    border: 2px solid rgba(82, 166, 199, 1);
+    box-shadow: 0px 0px 0px 1px rgba(82, 166, 199, 1);
+    animation: animation .3s forwards;
+    }

@@ -1,0 +1,52 @@
+let points;
+let time = new Date();
+let endTime;
+
+function startSession()
+{
+    if (points == 0 || points == undefined)
+    {
+        console.log("Du har ikke nok point!");
+        return;
+    }
+
+    switchTo("inSession");
+
+    loop();
+
+    let startTime = Date.now();
+    endTime = startTime + points * 10000;
+    console.log(endTime);
+
+    web.son();
+}
+
+// function sessionEnd()
+// {
+//     if (endTime == undefined)
+//     {
+//         console.log("An error ocurred: 404");
+//         return;
+//     }
+
+//     timeNow = Date.now();
+
+//     if (endTime <= timeNow)
+//     {
+//         console.log("Done");
+//         web.soff();
+//         return true;
+//     }
+//     else
+//     {
+//         return false;
+//     }
+// }
+
+function stopSession()
+{
+    switchTo("menu");
+    sessionStopped = true;
+    web.soff();
+    console.log("Du har ikke flere point");
+}
