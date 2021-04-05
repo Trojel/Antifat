@@ -60,6 +60,7 @@ async function predict() {
         //console.log(prediction)   
     }
     squat()
+    updatePoints()
     checkSession()
 
     // finally draw the poses
