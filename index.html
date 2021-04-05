@@ -1,19 +1,36 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>Antifat® 💦</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
-        <script src="http.js"></script>
-        <script src="squat.js"></script>
-        <script src="armboejning.js"></script>
-        <script src="tracker.js"></script>
-        <script src="main.js"></script>
+        <title>AntiFat® 💦</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/menu.css">
+        <link rel="stylesheet" href="css/session.css">
+        <link rel="stylesheet" href="css/tm.css">
     </head>
     <body>
-        <div>Teachable Machine Pose Model</div>
-        <button type="button" onclick="init()">Start</button>
-        <div><canvas id="canvas"></canvas></div>
-        <div id="label-container"></div>
-        <button id = "startSession" onclick="startSession()">Start Session </button>
+        <page id="menu">
+            <h1>AntiFat 💦</h1>
+            <button id="startTraining" class = "btn" onclick="init()">Start Træning</button>
+            <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
+        </page>
+        <page id="tm">
+            <div>Teachable Machine Pose Model</div>
+            <button type="button" class = "btn" onclick="init()">Start</button>
+            <div><canvas id="canvas"></canvas></div>
+            <div id="label-container"></div>
+        </page>
+        <page id="inSession">
+            <button id = "stopSession" class = "btn" onclick="stopSession()">Stop Session</button>
+        </page>
+
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+        <script src="js/http.js"></script>
+        <script src="js/squat.js"></script>
+        <script src="js/armboejning.js"></script>
+        <script src="js/tracker.js"></script>
+        <script src="js/teachableMachine.js"></script>
+        <script src="js/inSession.js"></script>
+        <script src="js/dom.js"></script>
     </body>
 </html>
