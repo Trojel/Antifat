@@ -8,3 +8,15 @@
     left: 50%;
     transform: translate(-50%,50%);
 }
+
+#tm #canvasContainer
+{
+    margin: auto;
+    margin-top: 10px;
+    width: 80vh;
+}
+
+#tm #canvas
+{
+    width: 100%;
+}
