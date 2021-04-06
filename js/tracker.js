@@ -12,7 +12,7 @@ function startSession()
 
     switchTo("inSession");
 
-    loop();
+    sessionLoop();
 
     let startTime = Date.now();
     endTime = startTime + points * 10000;

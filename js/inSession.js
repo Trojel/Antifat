@@ -1,6 +1,6 @@
-let sessionStopped = false;
+let sessionStopped = true;
 
-function loop()
+function sessionLoop()
 {
     if (points == 0 || sessionStopped)
     {
@@ -12,5 +12,5 @@ function loop()
     console.log(points);
     points--;
 
-    setTimeout(() => {  loop(); }, 1000);
+    setTimeout(() => {  sessionLoop(); }, 1000);
 }
