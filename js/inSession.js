@@ -10,6 +10,7 @@ function sessionLoop()
     }
 
     console.log(points);
+    console.log("hej")
     points--;
 
     setTimeout(() => {  sessionLoop(); }, 1000);
