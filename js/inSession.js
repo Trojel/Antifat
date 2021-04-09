@@ -9,7 +9,7 @@ function sessionLoop()
         return;
     }
 
-    document.querySelector(".points").innerHTML = "Point: " + String(points);
+    document.querySelector(".wallet").innerHTML = "Point: " + String(points);
     console.log(points);
     points--;
 
