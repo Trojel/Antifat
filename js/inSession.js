@@ -9,6 +9,7 @@ function sessionLoop()
         return;
     }
 
+    document.querySelector(".points").innerHTML = "Point: " + String(points);
     console.log(points);
     points--;
 
