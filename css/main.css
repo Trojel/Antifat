@@ -40,3 +40,10 @@ page
     color: rgb(255, 255, 255);
     font-size: 40px;
 }
+
+.time
+{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+}
