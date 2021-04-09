@@ -45,7 +45,7 @@ async function loop(timestamp) {
     webcam.update(); // update the webcam frame
     await predict();
     window.requestAnimationFrame(loop);
-    document.querySelector(".wallet").innerHTML = "Point: " + String(points);
+    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(points));
 }
 
 async function predict() {

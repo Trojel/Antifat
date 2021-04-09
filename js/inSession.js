@@ -9,7 +9,7 @@ function sessionLoop()
         return;
     }
 
-    document.querySelector(".wallet").innerHTML = "Point: " + String(points);
+    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(points));
 
     document.querySelector(".time").innerHTML = "Time: " + String(points) + "sec";
 
