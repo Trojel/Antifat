@@ -1,10 +1,13 @@
 let points;
 let time = new Date();
 let endTime;
+let pointsCopy;
 
 function startSession()
 {
     console.log(points);
+    pointsCopy = points
+    console.log("kopi" + String(pointsCopy))
     if (points == 0 || points == undefined)
     {
         window.alert("Du har ikke nok point!");

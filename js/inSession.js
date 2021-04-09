@@ -1,5 +1,6 @@
 let sessionStopped = true;
 
+
 function sessionLoop()
 {
     if (points == 0 || sessionStopped)
@@ -36,6 +37,7 @@ const COLOR_CODES = {
     threshold: ALERT_THRESHOLD
   }
 };
+
 
 const TIME_LIMIT = 20;
 let timePassed = 0;
