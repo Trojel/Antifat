@@ -4,6 +4,7 @@ let endTime;
 
 function startSession()
 {
+    console.log(points);
     if (points == 0 || points == undefined)
     {
         window.alert("Du har ikke nok point!");
@@ -13,6 +14,7 @@ function startSession()
 
     switchTo("inSession");
 
+    sessionStopped = false;
     sessionLoop();
 
     let startTime = Date.now();
@@ -46,6 +48,7 @@ function startSession()
 
 function stopSession()
 {
+    console.log("stop");
     switchTo("menu");
     sessionStopped = true;
     web.soff();
