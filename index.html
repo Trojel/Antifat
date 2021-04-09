@@ -10,7 +10,7 @@
     <body>
         <page id="menu">
             <h1>AntiFat 💦</h1>
-            <button id="startTraining" class = "btn" onclick="init()">Start Træning</button>
+            <button id="startTraining" class = "btn" onclick="switchTo('tm')">Start Træning</button>
             <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
         </page>
         <page id="tm">
@@ -19,7 +19,7 @@
             </div>
             <div id="label-container"></div>
             <button type="button" id="startTm" class = "btn" onclick="init()">Start</button>
-            <button type="button" id="endTm" class = "btn" onclick="">End</button>
+            <button type="button" id="endTm" class = "btn" onclick="switchTo('menu')">End</button>
         </page>
         <page id="inSession">
             <button id = "stopSession" class = "btn" onclick="stopSession()">Stop Session</button>
