@@ -30,4 +30,11 @@ page
     border: 2px solid rgba(82, 166, 199, 0);
     outline: 0;
     color: rgb(82, 166, 199);
+}s
+
+.wallet
+{
+    top: 10%;
+    left: 90%;
+    transform: translate(-50%,50%);
 }
