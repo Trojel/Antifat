@@ -9,13 +9,13 @@ function sessionLoop()
         sessionStopped = false;
         return;
     }
+    points--;
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(points));
 
     document.querySelector(".time").innerHTML = "Time: " + String(points) + "sec";
 
     console.log(points);
-    points--;
 
     setTimeout(() => {  sessionLoop(); }, 1000);
 }
