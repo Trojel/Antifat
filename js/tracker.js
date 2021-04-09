@@ -6,6 +6,7 @@ function startSession()
 {
     if (points == 0 || points == undefined)
     {
+        window.alert("Du har ikke nok point!");
         console.log("Du har ikke nok point!");
         return;
     }
