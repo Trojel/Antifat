@@ -9,9 +9,12 @@ let squatCount = 0;
 let squatSiddendeCheck = false
 let squatStaaendeCheck = false
 let squatCheck = false;
+let stopTm = false;
 
 async function init() {
     switchTo("tm");
+    document.querySelector("#startTm").style.display = "none";
+    stopTm = false;
 
     const modelURL = URL + "model.json";
     const metadataURL = URL + "metadata.json";
@@ -42,6 +45,10 @@ async function init() {
 }
 
 async function loop(timestamp) {
+    if (stopTm)
+    {
+        return;
+    }
     console.log("TM loop");
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(points));
     webcam.update(); // update the webcam frame

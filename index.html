@@ -10,7 +10,7 @@
     <body>
         <page id="menu">
             <h1>AntiFat 💦</h1>
-            <button id="startTraining" class = "btn" onclick="switchTo('tm')">Start Træning</button>
+            <button id="startTraining" class = "btn" onclick="switchTo('tm'); document.querySelector('#startTm').style.display = 'inline-block';">Start Træning</button>
             <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
             <p class = "wallet">Point: 0</p>
         </page>
@@ -20,7 +20,7 @@
             </div>
             <div id="label-container"></div>
             <button type="button" id="startTm" class = "btn" onclick="init()">Start</button>
-            <button type="button" id="endTm" class = "btn" onclick="switchTo('menu')">End</button>
+            <button type="button" id="endTm" class = "btn" onclick="switchTo('menu'); stopTm = true;">End</button>
             <p class = "wallet">Point: 0</p>
         </page>
         <page id="inSession">
