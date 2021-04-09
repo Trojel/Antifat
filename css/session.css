@@ -3,6 +3,9 @@
     display: none;
 }
 
-.stopSession{
-    width: 100;
+#endTm{
+    width: 100px;
+    top: 80%;
+    left: 10%;
+    transform: translate(-50%,50%);
 }
