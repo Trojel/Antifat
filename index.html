@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>AntiFat® 💦</title>
+        <title>Motus® 💦</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="css/session.css">
@@ -9,7 +9,11 @@
     </head>
     <body>
         <page id="menu">
-            <h1>AntiFat 💦</h1>
+            <h1>Motus 💦</h1>
+            <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
+                <input id="nameField" type="text" placeholder="Enter name">
+                <input type="submit" value="✔" class="btn" id="submitBtn">
+            </form>
             <button id="startTraining" class = "btn" onclick="switchTo('tm'); document.querySelector('#startTm').style.display = 'inline-block';">Start Træning</button>
             <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
             <p class = "wallet">Point: 0</p>
@@ -42,4 +46,3 @@
         <script src="js/functions.js"></script>
     </body>
 </html>
-

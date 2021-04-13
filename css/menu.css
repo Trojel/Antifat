@@ -5,18 +5,20 @@
     color: white;
 }
 
-#startSession
-{    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
-}
-
 #startTraining
 {
     top: 40%;
     left: 50%;
     transform: translate(-50%,40%);
+    display: none;
+}
+
+#startSession
+{    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    display: none;
 }
 
 @keyframes animation{
@@ -25,9 +27,36 @@
     }
     }
 
-.btn:focus{
+.btn:active{
     color: rgb(82, 166, 199);
     border: 2px solid rgba(82, 166, 199, 1);
     box-shadow: 0px 0px 0px 1px rgba(82, 166, 199, 1);
     animation: animation .3s forwards;
     }
+
+#nameForm
+{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-60%, -50%);
+}
+
+#nameField
+{
+    width: calc(var(--btnHeight) * 3);
+    height: var(--btnHeight);
+    margin-right: var(--btnHeight);
+    padding: none;
+    /* padding-left: calc(var(--btnHeight) / 2); */
+    border: none;
+    border-radius: 100px;
+    font-size: 25px;
+    border: 2px solid rgba(82, 166, 199, 0);
+    background-color: rgb(240, 240, 240);
+}
+
+#submitBtn
+{
+    width: var(--btnHeight);
+}
