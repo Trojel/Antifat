@@ -7,9 +7,9 @@ async function getJson(path)
         .then(json => users = json)
 }
 
+console.log("hej2")
 users = await getJson("database.json");
 
-console.log("hej2")
 console.log(users)
 
 
