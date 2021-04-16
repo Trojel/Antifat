@@ -12,6 +12,3 @@ function jsonReceived()
 {
     console.log(Object.keys(object.users).length) 
 }
-
-
-
