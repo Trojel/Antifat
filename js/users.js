@@ -1,7 +1,9 @@
+let users;
+
 json = fetch("database.json")
         .then (response => response.json())
-        .then (json => console.log(json.users.length))
-
+        .then (json => json = users)
+setTimeout(()=> console.log(users), 1000)
 
 
 // function getJson(data)
