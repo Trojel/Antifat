@@ -1,12 +1,16 @@
 let users;
 
-fetch('database.json')
-    .then(response => response.json())
-    .then(json => users = json)
+async function getJson(path)
+{
+    fetch(path)
+        .then(response => response.json())
+        .then(json => users = json)
+}
 
+users = await getJson("database.json");
 
-    console.log("hej")
-    console.log(users)
+console.log("hej")
+console.log(users)
 
 
 //for (let i = 0; i < json.users.length; i++){
