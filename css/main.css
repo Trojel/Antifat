@@ -6,6 +6,8 @@
     --btnHeight: 4rem;
     --borderRadius: .2rem;
     --boxShadow: 0 0 1rem .1rem rgba(0, 0, 0, .1);
+    --color1: rgb(15, 72, 82);
+    --color2: rgb(82, 166, 199);
 }
 
 body
@@ -27,12 +29,12 @@ page
 
 .btn
 {
-    position: absolute;
     width: calc(var(--btnHeight) * 5);
     height: var(--btnHeight);
+    margin-bottom: var(--space);
     padding: 14px 10px;
     border-radius: 100px;
-    font-size: 25px;
+    font-size: 1.5rem;
     border: 2px solid rgba(82, 166, 199, 0);
     outline: 0;
     color: rgb(82, 166, 199);
