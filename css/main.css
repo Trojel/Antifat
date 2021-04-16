@@ -1,8 +1,11 @@
 *
 {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-    --btnHeight: 60px;
+
+    --space: 2rem;
+    --btnHeight: 4rem;
+    --borderRadius: .2rem;
+    --boxShadow: 0 0 1rem .1rem rgba(0, 0, 0, .1);
 }
 
 body
@@ -36,6 +39,14 @@ page
     background-color: rgb(240, 240, 240);
 }
 
+.btn:active
+{
+    color: rgb(82, 166, 199);
+    border: 2px solid rgba(82, 166, 199, 1);
+    box-shadow: 0px 0px 0px 1px rgba(82, 166, 199, 1);
+    animation: animation .3s forwards;
+}
+
 .wallet
 {
     position: absolute;
@@ -51,4 +62,12 @@ page
     position: absolute;
     top: 40%;
     left: 50%;
+}
+
+@keyframes animation
+{
+    100%
+    {
+        box-shadow: 0px 0px 50px 20px rgba(199, 239, 255, 0);
+    }
 }
