@@ -4,11 +4,11 @@ json = fetch("database.json")
 
 
 
-function getJson(data)
-{
-     for(let i = 0; i < data.users.length; i++){
-        console.log(i)
-    }   
-}
+// function getJson(data)
+// {
+//      for(let i = 0; i < data.users.length; i++){
+//         console.log(i)
+//     }   
+// }
 
 
