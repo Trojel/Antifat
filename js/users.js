@@ -9,7 +9,7 @@ async function getJson(path)
 
 users = await getJson("database.json");
 
-console.log("hej")
+console.log("hej2")
 console.log(users)
 
 
