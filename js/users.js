@@ -5,7 +5,7 @@ json = fetch("database.json")
 
 
 
-for (let i = 0; i < Object.keys(json).length; i++){
+for (let i = 0; i < json.array.length; i++){
     console.log("hej")
 }
 
