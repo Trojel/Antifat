@@ -7,7 +7,7 @@ async function fetchJson(path)
     return movies;
 }
 
-console.log("hej2")
+console.log("hej3")
 users = await fetchJson("database.json");
 
 console.log(users)
