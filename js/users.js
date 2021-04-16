@@ -1,14 +1,14 @@
 let users;
 
-async function getJson(path)
+async function fetchJson(path)
 {
-    await fetch(path)
-        .then(response => response.json())
-        .then(json => users = json)
+    const response = await fetch(path);
+    const movies = await response.json();
+    return movies;
 }
 
 console.log("hej2")
-users = await getJson("database.json");
+users = await fetchJson("database.json");
 
 console.log(users)
 
