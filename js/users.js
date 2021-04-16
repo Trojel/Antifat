@@ -5,7 +5,7 @@ fetch('database.json')
     then(json => users = json)
 
 
-    console.log("hallo")
+    console.log("hej")
     console.log(users)
 
 
