@@ -1,6 +1,6 @@
-json = await fetch("database.json")
+json = fetch("database.json")
         .then (response => response.json())
-        .then (getJson(json))
+        .then (getJson(await json))
 
 
 function getJson(data)
