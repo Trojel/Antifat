@@ -10,13 +10,22 @@
     <body>
         <page id="menu">
             <h1>Motus 💦</h1>
+            <table id="scoreboard">
+                <h2>Pointtavle</h2>
+                <tr>
+                    <th>
+                        Navn
+                    </th>
+                    <th>
+                        Points
+                    </th>
+                </tr>
+            </table>
             <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
-                <input id="nameField" type="text" placeholder="Enter name">
+                <input id="nameField" type="text" placeholder="Indtast navn">
                 <input type="submit" value="✔" class="btn" id="submitBtn">
             </form>
-            <button id="startTraining" class = "btn" onclick="
-                switchTo('tm');
-                document.querySelector('#startTm').style.display = 'inline-block';">
+            <button id="startTraining" class = "btn" onclick="startTraining()">
                 Start Træning
             </button>
             <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
@@ -36,12 +45,12 @@
             <p class = "wallet">Point: 0</p>
             <p class = "time"></p>
             <div id = "app" ></div>
-
         </page>
 
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
         <script src="js/http.js"></script>
+        <script src="js/player.js"></script>
         <script src="js/squat.js"></script>
         <script src="js/armboejning.js"></script>
         <script src="js/tracker.js"></script>
