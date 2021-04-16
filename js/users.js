@@ -10,7 +10,7 @@ setTimeout(()=> getJson(users), 1000)
 function getJson(data)
 {
      for(let i = 0; i < data.length; i++){
-        console.log(i)
+        console.log(data)
     }   
 }
 
