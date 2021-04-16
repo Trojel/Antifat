@@ -1,3 +1,4 @@
+
 let object;
 
 fetch("database.json")
