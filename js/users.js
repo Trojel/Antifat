@@ -8,6 +8,7 @@ async function fetchJson(path)
 }
 
 console.log("hej3")
+
 users = await fetchJson("database.json");
 
 console.log(users)
