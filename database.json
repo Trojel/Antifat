@@ -2,11 +2,13 @@
     "users":
     [
         {
-            "name": "William"
+            "name": "William",
+            "score": 1000
         },
 
         {
-            "name": "Oliver"
+            "name": "Oliver",
+            "score": 500
         }
     ]
 }
