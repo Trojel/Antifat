@@ -1,6 +1,6 @@
 json = fetch("database.json")
         .then(response => response.json())
-        .then(getJson(json))
+        .then(console.log(json.users.length))
 
 
 function getJson(data)
