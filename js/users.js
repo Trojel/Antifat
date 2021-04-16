@@ -2,7 +2,7 @@ let users;
 
 fetch('database.json')
     .then(response => response.json())
-    then(json => users = json)
+    .then(json => users = json)
 
 
     console.log("hej")
