@@ -41,5 +41,5 @@ function startTraining()
     document.querySelector('#startTm').style.display = 'inline-block';
 
     let playerName = document.querySelecter('#nameField').value;
-    player = new Player(playerName);
+    player = new User(playerName, undefined);
 }

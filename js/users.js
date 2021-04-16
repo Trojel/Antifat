@@ -1,5 +1,6 @@
 
 let object;
+let users = [];
 
 fetch("database.json")
         .then (response => response.json())
@@ -7,8 +8,16 @@ fetch("database.json")
         
 setTimeout(() => jsonReceived(), 1000)
 
-
 function jsonReceived()
 {
     console.log(Object.keys(object.users).length) 
+}
+
+class User
+{
+    constructor(name, points)
+    {
+        this.name = name;
+        this.points = points || 0;
+    }
 }

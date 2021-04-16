@@ -10,8 +10,19 @@
     <body>
         <page id="menu">
             <h1>Motus 💦</h1>
+            <table id="scoreboard">
+                <h2>Pointtavle</h2>
+                <tr>
+                    <th>
+                        Navn
+                    </th>
+                    <th>
+                        Points
+                    </th>
+                </tr>
+            </table>
             <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
-                <input id="nameField" type="text" placeholder="Enter name">
+                <input id="nameField" type="text" placeholder="Indtast navn">
                 <input type="submit" value="✔" class="btn" id="submitBtn">
             </form>
             <button id="startTraining" class = "btn" onclick="startTraining()">
