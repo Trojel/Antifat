@@ -2,7 +2,7 @@ let users;
 
 async function getJson(path)
 {
-    fetch(path)
+    await fetch(path)
         .then(response => response.json())
         .then(json => users = json)
 }
