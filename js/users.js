@@ -5,12 +5,12 @@ fetch("database.json")
         .then (response => response.json())
         .then (json => object = json)
         
-setTimeout(()=> getJson(object), 1000)
+setTimeout(() => jsonReceived(), 1000)
 
 
-function getJson(data)
+function jsonReceived()
 {
-    console.log(Object.keys(data.users).length) 
+    console.log(Object.keys(object.users).length) 
 }
 
 
