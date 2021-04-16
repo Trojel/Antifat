@@ -3,13 +3,14 @@ let users;
 async function fetchJson(path)
 {
     const response = await fetch(path);
-    const movies = await response.json();
-    return movies;
+    const json = await response.json();
+    return json;
 }
 
 console.log("hej3")
 
-users = await fetchJson("database.json");
+
+users = fetchJson("database.json");
 
 console.log(users)
 
