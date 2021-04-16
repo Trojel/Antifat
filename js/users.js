@@ -1,6 +1,6 @@
 let users;
 
-json = fetch("database.json")
+fetch("database.json")
         .then (response => response.json())
         .then (json => json = users)
         
