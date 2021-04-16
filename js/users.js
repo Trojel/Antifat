@@ -1,12 +1,11 @@
 json = fetch("database.json")
         .then(response => response.json())
-        .then(json => console.log(json))
+        .then(getJson(json))
 
 
-
-
-for (let i = 0; i < json.array.length; i++){
-    console.log("hej")
-}
+function getJson(data)
+    for (let i = 0; i < data.users.length; i++){
+        console.log("hej")
+    }
 
 
