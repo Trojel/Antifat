@@ -10,39 +10,43 @@
     <body>
         <page id="menu">
             <h1>Motus 💦</h1>
-            <table id="scoreboard">
+            <div id="scoreboard">
                 <h2 style="color: white;">Pointtavle</h2>
-                <tr>
-                    <th>
-                        Plads
-                    </th>
-                    <th>
-                        Navn
-                    </th>
-                    <th>
-                        Points
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        1
-                    </td>
-                    <td>
-                        Oliver
-                    </td>
-                    <td>
-                        99999
-                    </td>
-                </tr>
-            </table>
-            <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
-                <input id="nameField" type="text" placeholder="Indtast navn">
-                <input type="submit" value="✔" class="btn" id="submitBtn">
-            </form>
-            <button id="startTraining" class = "btn" onclick="startTraining()">
-                Start Træning
-            </button>
-            <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
+                <table>
+                    <tr>
+                        <th>
+                            Plads
+                        </th>
+                        <th>
+                            Navn
+                        </th>
+                        <th>
+                            Points
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            Oliver
+                        </td>
+                        <td>
+                            99999
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="btnContainer">
+                <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
+                    <input id="nameField" type="text" placeholder="Indtast navn">
+                    <input type="submit" value="✔" class="btn" id="submitBtn">
+                </form>
+                <button id="startTraining" class = "btn" onclick="startTraining()">
+                    Start Træning
+                </button>
+                <button id="startSession" class = "btn" onclick="startSession()">Start Spilsession</button>
+            </div>
             <p class = "wallet">Point: 0</p>
         </page>
         <page id="tm">
