@@ -8,6 +8,13 @@
 #scoreboard
 {
     color: white;
+    text-align: center;
+    background-color: yellow;
+}
+
+#scoreboard th, #scoreboard td
+{
+    width: 10vw;
 }
 
 #startTraining
