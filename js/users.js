@@ -9,7 +9,7 @@ setTimeout(()=> getJson(users), 1000)
 
 function getJson(data)
 {
-    console.log(data) 
+    console.log(data.length) 
 }
 
 
