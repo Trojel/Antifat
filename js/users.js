@@ -13,9 +13,12 @@ setTimeout(() => jsonReceived(), 1000)
 function jsonReceived()
 {
     console.log("usersObject ", object);
+    console.log("userObj length: ", object.users.length);
 
-    for (let i = 0; i < Object.keys(object.users); i++){
-        users[i] = new User(object.users[i].name, object.users[i].score)
+    for (let i = 0; i < object.users.length; i++)
+    {
+        console.log(i);
+        users[i] = new User(object.users[i].name, object.users[i].score);
     }
     
 }
