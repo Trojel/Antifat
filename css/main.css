@@ -38,6 +38,7 @@ page
     outline: 0;
     color: rgb(82, 166, 199);
     background-color: rgb(240, 240, 240);
+    box-shadow: var(--boxShadow);
 }
 
 .btn:active
