@@ -2,7 +2,7 @@ let object;
 let users = [];
 let activeUser = null;
 
-fetch("database.json")
+fetch("https://raw.githubusercontent.com/Trojel/Antifat/main/database.json")
     .then (response => response.json())
     .then (json => object = json)
         
