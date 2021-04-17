@@ -34,7 +34,12 @@ function initializeScoreboard()
     let usersRanked = users;
 
     usersRanked.sort((a, b) => (a.points > b.points) ? -1 : 1);
-    console.log(usersRanked);
+
+    for (let i = 0; i < usersRanked.length; i++)
+    {
+        scoreboardRows[i] = new ScoreboardRow(i + 1, usersRanked[i]);
+        scoreboardRows[i].appendToElem(document.querySelector("#scoreboard > table"));
+    }
 }
 
 class User
@@ -50,7 +55,26 @@ class ScoreboardRow
 {
     constructor(place, user)
     {
-        this.place = place;
-        this.user = user;
+        this.elem = document.createElement("TR");
+
+        let placeColElem = document.createElement("TD");
+        placeColElem.innerHTML = String(place);
+
+        let nameColElem = document.createElement("TD");
+        nameColElem.innerHTML = user.name;
+
+        let pointColElem = document.createElement("TD");
+        pointColElem.innerHTML = String(user.points);
+
+        this.elem.appendChild(placeColElem);
+        this.elem.appendChild(nameColElem);
+        this.elem.appendChild(pointColElem);
     }
+
+    appendToElem(elem)
+    {
+        elem.appendChild(this.elem);
+    }
+
+    // Måske tilføj update metode
 }
