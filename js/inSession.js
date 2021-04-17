@@ -11,7 +11,7 @@ function sessionLoop()
     }
     points--;
 
-    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(points));
+    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 
     document.querySelector(".time").innerHTML = "Time: " + String(points) + "sec";
 

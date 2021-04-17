@@ -1,4 +1,3 @@
-let points;
 let time = new Date();
 let endTime;
 let pointsCopy;
@@ -51,7 +50,6 @@ function startSession()
 
 function stopSession()
 {
-    console.log("stop");
     switchTo("menu");
     sessionStopped = true;
     web.soff();
