@@ -9,7 +9,7 @@ function switchTo(pageId)
     Object.keys(pageElems).forEach(key => {
         if (key == pageId)
         {
-            pageElems[key].style.display = "inline-block";
+            pageElems[key].style.display = "grid";
         }
         else
         {

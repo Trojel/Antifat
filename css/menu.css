@@ -1,6 +1,5 @@
 #menu
 {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 3fr;
 }
@@ -37,7 +36,7 @@
     width: 5rem;
 }
 
-#btnContainer
+#menu .btnContainer
 {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -45,7 +44,7 @@
     flex-direction: column;
 }
 
-#btnContainer *
+#menu .btnContainer *
 {
     font-size: 1.5rem;
 }
@@ -102,4 +101,38 @@
     margin-bottom: var(--space);
     width: 100%;
     display: none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+    #menu
+    {
+        grid-template-columns: 1px 1fr 1fr;
+    }
+
+    #menu .btnContainer
+    {
+        margin: var(--space);
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    #menu
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 40rem;
+    }
+
+    #menu .btnContainer
+    {
+        grid-column: 1 / 2;
+        margin: var(--space);
+    }
+
+    #scoreboard
+    {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
 }

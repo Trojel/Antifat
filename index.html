@@ -24,6 +24,7 @@
                             Point
                         </th>
                     </tr>
+                    <!--Temp row-->
                     <tr>
                         <td>
                             1
@@ -35,9 +36,10 @@
                             99999
                         </td>
                     </tr>
+                    <!--Temp row-->
                 </table>
             </div>
-            <div id="btnContainer">
+            <div class="btnContainer">
                 <form id="nameForm" onsubmit="submitName()" action="javascript:void(0);">
                     <input id="nameField" type="text" placeholder="Indtast navn">
                     <input id="submitBtn" class="btn" type="submit" value="✔">
@@ -56,15 +58,19 @@
                 <canvas id="canvas"></canvas>
             </div>
             <div id="label-container"></div>
-            <button type="button" id="startTm" class = "btn" onclick="init()">Start</button>
-            <button type="button" id="endTm" class = "btn" onclick="switchTo('menu'); stopTm = true;">End</button>
+            <div class="btnContainer">
+                <button id="startTm" class = "btn" type="button" onclick="init()">Start</button>
+                <button id="endTm" class = "btn" type="button" onclick="switchTo('menu'); stopTm = true;">End</button>
+            </div>
             <p class = "wallet">Point: 0</p>
         </page>
         <page id="inSession">
-            <button id = "stopSession" class = "btn" onclick="stopSession()">Stop Session</button>
             <p class = "wallet">Point: 0</p>
             <p class = "time"></p>
             <div id = "app" ></div>
+            <div class="btnContainer">
+                <button id = "stopSession" class = "btn" onclick="stopSession()">Stop Session</button>
+            </div>
         </page>
 
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>

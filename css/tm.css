@@ -1,19 +1,31 @@
 #tm
 {
     display: none;
+    grid-template-rows: auto calc(var(--btnHeight) + 2 * var(--space));
 }
 
-#tm #startTm{
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%,50%);
+#tm .btnContainer
+{
+    grid-row: 2 / 3;
+    display: flex;
+}
+
+#tm #startTm
+{
+    margin: auto;
+}
+
+#tm #endTm
+{
+    margin: auto;
 }
 
 #tm #canvasContainer
 {
     margin: auto;
-    margin-top: 10px;
+    margin-top: var(--space);
     width: 80vh;
+    grid-row: 1 / 2;
 }
 
 #tm #canvas
