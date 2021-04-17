@@ -5,10 +5,21 @@
             "name": "William",
             "score": 1000
         },
-
         {
             "name": "Oliver",
             "score": 500
+        },
+        {
+            "name": "Neger",
+            "score": 800
+        },
+        {
+            "name": "Adolf",
+            "score": 420
+        },
+        {
+            "name": "x",
+            "score": 50000
         }
     ]
 }

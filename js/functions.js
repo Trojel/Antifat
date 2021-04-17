@@ -32,9 +32,8 @@ function submitName()
     document.querySelector("#startSession").style.display = "inline-block";
     document.querySelector(".wallet").style.display = "inline-block";
 
-    user = users.find(user => user.name === name);
-    console.log("Alll users: ", users);
-    console.log("found user: ", user);
+    activeUser = users.find(user => user.name === name);
+    console.log("Alll users: ", users, " found: ", activeUser);
 }
 
 function startTraining()
