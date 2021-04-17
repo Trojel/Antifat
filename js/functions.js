@@ -34,6 +34,8 @@ function submitName()
 
     activeUser = users.find(user => user.name === name);
     // console.log("Alll users: ", users, " found: ", activeUser);
+
+    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 }
 
 function startTraining()
