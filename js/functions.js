@@ -33,7 +33,7 @@ function submitName()
     document.querySelector(".wallet").style.display = "inline-block";
 
     activeUser = users.find(user => user.name === name);
-    console.log("Alll users: ", users, " found: ", activeUser);
+    // console.log("Alll users: ", users, " found: ", activeUser);
 }
 
 function startTraining()

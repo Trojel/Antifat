@@ -12,7 +12,13 @@ setTimeout(() => jsonReceived(), 1000)
 
 function jsonReceived()
 {
-    console.log("usersObj: ", object, " len: ", object.users.length);
+    if (object === undefined)
+    {
+        console.log("JSON not received!");
+        return;
+    }
+
+    // console.log("usersObj: ", object, " len: ", object.users.length);
 
     for (let i = 0; i < object.users.length; i++)
     {
