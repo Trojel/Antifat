@@ -1,6 +1,6 @@
 let object;
 let users = [];
-let user;
+let user = "penis";
 
 fetch("database.json")
         .then (response => response.json())
@@ -12,7 +12,7 @@ setTimeout(() => jsonReceived(), 1000)
 
 function jsonReceived()
 {
-    console.log("users ", object);
+    console.log("usersObject ", object);
 
     for (let i = 0; i < Object.keys(object.users); i++){
         users[i] = new User(object.users[i].name, object.users[i].score)

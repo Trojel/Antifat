@@ -33,7 +33,7 @@ function submitName()
     document.querySelector(".wallet").style.display = "inline-block";
 
     user = users.find(user => user.name === name);
-    console.log(user);
+    console.log("found user: ", user);
 }
 
 function startTraining()
