@@ -1,6 +1,6 @@
 let object;
 let users = [];
-let activeUser = "penis";
+let activeUser = null;
 
 fetch("database.json")
     .then (response => response.json())

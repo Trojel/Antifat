@@ -40,9 +40,12 @@ function submitName()
 
 function startTraining()
 {
+    if (!activeUser)
+    {
+        alert("Venligst indtast et navn (eller JSON problem)");
+        return;
+    }
+
     switchTo('tm');
     document.querySelector('#startTm').style.display = 'inline-block';
-
-    let playerName = document.querySelecter('#nameField').value;
-    player = new User(playerName, undefined);
 }
