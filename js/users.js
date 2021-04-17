@@ -1,6 +1,6 @@
-
 let object;
 let users = [];
+let user;
 
 fetch("database.json")
         .then (response => response.json())
@@ -8,10 +8,14 @@ fetch("database.json")
         
 setTimeout(() => jsonReceived(), 1000)
 
+// Skriv til json igen når en bruger har optjent point
+
 function jsonReceived()
 {
+    console.log("users ", object);
+
     for (let i = 0; i < Object.keys(object.users); i++){
-        users[i] = new User(object.users.name, object.useres.score)
+        users[i] = new User(object.users[i].name, object.users[i].score)
     }
     
 }
