@@ -1,74 +1,138 @@
-#menu h1
+#menu
 {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+#menu > h1
+{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
     text-align: center;
-    font-size: 100px;
+    font-size: 5rem;
     color: white;
 }
 
 #scoreboard
 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
     color: white;
     text-align: center;
     background-color: rgba(255, 255, 255, .2);
+    margin: var(--space);
+    margin-top: 0;
+    border-radius: var(--borderRadius);
+    box-shadow: var(--boxShadow);
 }
 
-#scoreboard th, #scoreboard td
+#scoreboard > table
 {
-    width: 10vw;
+    width: 100%;
 }
 
-#startTraining
+#scoreboard tr > *:first-child
 {
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,40%);
-    display: none;
+    width: 5rem;
 }
 
-#startSession
-{    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
-    display: none;
+#menu .btnContainer
+{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes animation{
-    100%{
-        box-shadow: 0px 0px 50px 20px rgba(199, 239, 255, 0);
-    }
-    }
-
-.btn:active{
-    color: rgb(82, 166, 199);
-    border: 2px solid rgba(82, 166, 199, 1);
-    box-shadow: 0px 0px 0px 1px rgba(82, 166, 199, 1);
-    animation: animation .3s forwards;
-    }
+#menu .btnContainer *
+{
+    font-size: 1.5rem;
+}
 
 #nameForm
 {
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    transform: translate(-60%, -50%);
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: var(--space);
+    width: 100%;
+    height: var(--btnHeight);
+    display: grid;
+    grid-template-columns: auto var(--btnHeight) var(--btnHeight);
 }
 
 #nameField
 {
-    width: calc(var(--btnHeight) * 3);
+    grid-column: 1 / 2;
     height: var(--btnHeight);
-    margin-right: var(--btnHeight);
-    padding: none;
-    /* padding-left: calc(var(--btnHeight) / 2); */
-    border: none;
-    border-radius: 100px;
-    font-size: 25px;
-    border: 2px solid rgba(82, 166, 199, 0);
+    padding: 0;
+    border: 0;
+    border-radius: var(--borderRadius);
     background-color: rgb(240, 240, 240);
+    text-align: center;
+    color: var(--color2);
+    transition: border-radius .2s ease-in-out;
+}
+
+#nameField:focus
+{
+    border-radius: 100px;
+    outline: none;
 }
 
 #submitBtn
 {
+    grid-column: 3 / 4;
     width: var(--btnHeight);
+}
+
+#startTraining
+{
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: var(--space);
+    width: 100%;
+    display: none;
+}
+
+#startSession
+{
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: var(--space);
+    width: 100%;
+    display: none;
+}
+
+@media only screen and (max-width: 1200px)
+{
+    #menu
+    {
+        grid-template-columns: 1px 1fr 1fr;
+    }
+
+    #menu .btnContainer
+    {
+        margin: var(--space);
+    }
+}
+
+@media only screen and (max-width: 800px)
+{
+    #menu
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 40rem;
+    }
+
+    #menu .btnContainer
+    {
+        grid-column: 1 / 2;
+        margin: var(--space);
+    }
+
+    #scoreboard
+    {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
 }
