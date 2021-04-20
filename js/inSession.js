@@ -13,8 +13,6 @@ function sessionLoop()
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 
-    document.querySelector(".time").innerHTML = "Time: " + String(activeUser.points) + "sec";
-
     console.log(activeUser.points);
 
     setTimeout(() => {  sessionLoop(); }, 1000);

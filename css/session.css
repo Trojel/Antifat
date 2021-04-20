@@ -15,17 +15,14 @@
     margin : auto;
 }
 
-/* body { Body skal ikke stå her
-    font-family: sans-serif;
-    display: grid;
-    height: 100vh;
-    place-items: center;
-  } */
   
   .base-timer {
     position: relative;
     width: 300px;
     height: 300px;
+    margin: auto;
+    margin-top: calc(2 * var(--space));
+
   }
   
   .base-timer__svg {
