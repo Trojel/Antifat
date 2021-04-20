@@ -38,10 +38,10 @@ async function init() {
     const canvas = document.getElementById("canvas");
     canvas.width = size; canvas.height = size;
     ctx = canvas.getContext("2d");
-    labelContainer = document.getElementById("label-container");
-    for (let i = 0; i < maxPredictions; i++) { // and class labels
-        labelContainer.appendChild(document.createElement("div"));
-    }
+    // labelContainer = document.getElementById("label-container");
+    // for (let i = 0; i < maxPredictions; i++) { // and class labels
+    //     labelContainer.appendChild(document.createElement("div"));
+    // }
 
     squatCount = activeUser.points;
 }
@@ -67,7 +67,7 @@ async function predict() {
     for (let i = 0; i < maxPredictions; i++) {
         const classPrediction =
             prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        labelContainer.childNodes[i].innerHTML = classPrediction;
+        // labelContainer.childNodes[i].innerHTML = classPrediction;
         //console.log(prediction)   
     }
     squat()

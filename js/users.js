@@ -64,6 +64,7 @@ class ScoreboardRow
     constructor(place, user)
     {
         this.elem = document.createElement("TR");
+        if (place % 2) this.elem.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
 
         let placeColElem = document.createElement("TD");
         placeColElem.innerHTML = String(place);
