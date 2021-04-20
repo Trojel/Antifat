@@ -1,27 +1,26 @@
 #inSession
 {
     display: none;
+    grid-template-rows: 1fr 1fr;
 }
 
-#endTm{
-    width: 100px;
-    top: 80%;
-    left: 10%;
-    transform: translate(-50%,50%);
-}
-#stopSession{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,50%);
+#inSession .btnContainer
+{
+    grid-row: 2 / 3;
+    display: flex;
 }
 
-body {
+#stopSession
+{
+    margin : auto;
+}
+
+/* body { Body skal ikke stå her
     font-family: sans-serif;
     display: grid;
     height: 100vh;
     place-items: center;
-  }
+  } */
   
   .base-timer {
     position: relative;

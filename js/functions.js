@@ -9,7 +9,7 @@ function switchTo(pageId)
     Object.keys(pageElems).forEach(key => {
         if (key == pageId)
         {
-            pageElems[key].style.display = "inline-block";
+            pageElems[key].style.display = "grid";
         }
         else
         {
@@ -32,14 +32,20 @@ function submitName()
     document.querySelector("#startSession").style.display = "inline-block";
     document.querySelector(".wallet").style.display = "inline-block";
 
-    console.log(name);
+    activeUser = users.find(user => user.name === name);
+    // console.log("Alll users: ", users, " found: ", activeUser);
+
+    document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 }
 
 function startTraining()
 {
+    if (!activeUser)
+    {
+        alert("Venligst indtast et navn (eller JSON problem)");
+        return;
+    }
+
     switchTo('tm');
     document.querySelector('#startTm').style.display = 'inline-block';
-
-    let playerName = document.querySelecter('#nameField').value;
-    player = new User(playerName, undefined);
 }
