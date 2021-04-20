@@ -73,7 +73,11 @@ function startTraining()
 
 function endTm()
 {
-    webcam.stop();
+    if (webcam != undefined)
+    {
+        webcam.stop();
+    }
+    
     stopTm = true;
     switchTo('menu');
     document.querySelectorAll("page").forEach(elem => elem.style.backgroundColor = "var(--color1)");

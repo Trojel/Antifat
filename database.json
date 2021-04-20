@@ -14,7 +14,7 @@
         {
             "name": "Simon",
             "squatCount": 28954,
-            "pushupCount": -3
+            "pushupCount": 4
         },
         {
             "name": "William",
@@ -23,8 +23,8 @@
         },
         {
             "name": "<br>Folk der skriver:<br><br>function myFunc(){<br>}          <br><br>istedet for:<br><br>function myFunc()<br>{          <br>}          <br>",
-            "squatCount": -9999,
-            "pushupCount": -6666
+            "squatCount": 0,
+            "pushupCount": 0
         }
     ]
 }
