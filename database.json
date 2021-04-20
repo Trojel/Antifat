@@ -3,23 +3,28 @@
     [
         {
             "name": "🍪🛴📍💎🌜®️ får 🕛",
-            "score": 420
+            "squatCount": 420,
+            "pushupCount": 69
         },
         {
             "name": "Oskar",
-            "score": 69
+            "squatCount": 46,
+            "pushupCount": 1
         },
         {
             "name": "Simon",
-            "score": -3
+            "squatCount": 28954,
+            "pushupCount": -3
         },
         {
             "name": "William",
-            "score": 666
+            "squatCount": 666,
+            "pushupCount": 90
         },
         {
             "name": "<br>Folk der skriver:<br><br>function myFunc(){<br>}          <br><br>istedet for:<br><br>function myFunc()<br>{          <br>}          <br>",
-            "score": -9999999
+            "squatCount": -9999,
+            "pushupCount": -6666
         }
     ]
 }

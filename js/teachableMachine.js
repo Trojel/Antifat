@@ -5,7 +5,6 @@
 const URL = "https://teachablemachine.withgoogle.com/models/TKHflD_NM/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 let web = new Web();
-let squatCount = 0;
 let squatSiddendeCheck = false
 let squatStaaendeCheck = false
 let squatCheck = false;
@@ -24,7 +23,6 @@ async function init() {
     // Note: the pose library adds a tmPose object to your window (window.tmPose)
     model = await tmPose.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
-    
 
     // Convenience function to setup a webcam
     const size = 200;
@@ -38,12 +36,6 @@ async function init() {
     const canvas = document.getElementById("canvas");
     canvas.width = size; canvas.height = size;
     ctx = canvas.getContext("2d");
-    // labelContainer = document.getElementById("label-container");
-    // for (let i = 0; i < maxPredictions; i++) { // and class labels
-    //     labelContainer.appendChild(document.createElement("div"));
-    // }
-
-    squatCount = activeUser.points;
 }
 
 async function loop(timestamp) {
@@ -64,18 +56,10 @@ async function predict() {
     // Prediction 2: run input through teachable machine classification model
     window.prediction = await model.predict(posenetOutput);
 
-    for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-        // labelContainer.childNodes[i].innerHTML = classPrediction;
-        //console.log(prediction)   
-    }
-
     for (position of prediction)
     {
-        if (position.probability > 0.9)
+        if (position.probability > 0.99)
         {
-            console.log("proba");
             switch (position.className)
             {
                 case "squat stående":
@@ -95,9 +79,7 @@ async function predict() {
         }
     }
 
-    // console.log(prediction);
     squat()
-    activeUser.points = squatCount;
 
     // finally draw the poses
     drawPose(pose);

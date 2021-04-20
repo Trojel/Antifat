@@ -19,8 +19,8 @@
         if (squatSiddendeCheck && prediction[i].className == "squat stående" && prediction[i].probability > 0.99){
             squatSiddendeCheck = false;
             if (!squatCheck){
-                squatCount += 1
-                console.log("sCount: " , squatCount);
+                activeUser.squatCount++;
+                activeUser.updatePoints();
             }
             squatCheck = true
                 

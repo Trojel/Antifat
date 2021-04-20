@@ -16,8 +16,8 @@ class Pushup
         {
             this.downCheck = false;
             
-            console.log("push point for u");
-            activeUser.points++;
+            activeUser.pushupCount++;
+            activeUser.updatePoints();
         }
     }
 }

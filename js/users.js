@@ -22,7 +22,7 @@ function jsonReceived()
 
     for (let i = 0; i < object.users.length; i++)
     {
-        users[i] = new User(object.users[i].name, object.users[i].score);
+        users[i] = new User(object.users[i].name, object.users[i].squatCount, object.users[i].pushupCount);
     }
 
     initializeScoreboard();
@@ -52,10 +52,22 @@ function initializeScoreboard()
 
 class User
 {
-    constructor(name, points)
+    constructor(name, squatCount, pushupCount)
     {
         this.name = name;
-        this.points = points || 0;
+        this.squatCount = squatCount || 0;
+        this.pushupCount = pushupCount || 0;
+        
+        this.points;
+        this.updatePoints();
+    }
+
+    updatePoints()
+    {
+        let squatPoints = this.squatCount ** 0.9;
+        let pushupPoints = this.pushupCount ** 0.9;
+
+        this.points = Math.floor(squatPoints + pushupPoints);
     }
 }
 
