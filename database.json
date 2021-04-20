@@ -19,7 +19,7 @@
         },
         {
             "name": "Folk der skriver: 'function myFunc{ <br> }' istedet for: 'function myFunc <br> { <br> }'",
-            "score": 2
+            "score": -9999999
         }
     ]
 }
