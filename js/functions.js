@@ -16,6 +16,8 @@ function switchTo(pageId)
             pageElems[key].style.display = "none";
         }
     });
+
+    if (pageId === "menu") initializeScoreboard();
 }
 
 function submitName()
@@ -32,7 +34,25 @@ function submitName()
     document.querySelector("#startSession").style.display = "inline-block";
     document.querySelector(".wallet").style.display = "inline-block";
 
-    activeUser = users.find(user => user.name === name);
+    let userExists = false;
+    for (let i = 0; i < users.length; i++)
+    {
+        if (users[i].name === name)
+        {
+            userExists = true;
+            activeUser = users.find(user => user.name === name);
+            break;
+        }
+    }
+
+    if (!userExists)
+    {
+        activeUser = new User(name);
+        users.push(activeUser);
+    }
+
+    initializeScoreboard();
+    
     // console.log("Alll users: ", users, " found: ", activeUser);
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));

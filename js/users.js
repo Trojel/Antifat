@@ -41,6 +41,8 @@ function initializeScoreboard()
 
     usersRanked.sort((a, b) => (a.points > b.points) ? -1 : 1);
 
+    document.querySelectorAll("#scoreboard > table > *:not(:first-child)").forEach(elem => elem.remove());
+
     for (let i = 0; i < usersRanked.length; i++)
     {
         scoreboardRows[i] = new ScoreboardRow(i + 1, usersRanked[i]);
