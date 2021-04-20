@@ -51,7 +51,6 @@ async function loop(timestamp) {
     {
         return;
     }
-    console.log("TM loop");
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
     webcam.update(); // update the webcam frame
     await predict();
