@@ -54,5 +54,4 @@ function stopSession()
     switchTo("menu");
     sessionStopped = true;
     web.soff();
-    console.log("Du har ikke flere point");
 }

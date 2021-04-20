@@ -17,6 +17,7 @@ function switchTo(pageId)
         }
     });
 
+    document.querySelectorAll(".wallet").forEach(elem => elem.style.display = "block");
     if (pageId === "menu") initializeScoreboard();
 }
 
