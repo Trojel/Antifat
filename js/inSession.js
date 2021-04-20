@@ -13,8 +13,6 @@ function sessionLoop()
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 
-    console.log(activeUser.points);
-
     setTimeout(() => {  sessionLoop(); }, 1000);
 }
 
@@ -77,7 +75,6 @@ function startTimer() {
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    console.log("kopi: " + pointsCopy)
     document.getElementById("base-timer-label").innerHTML = formatTime(
       timeLeft
     );
