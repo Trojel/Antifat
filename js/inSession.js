@@ -1,5 +1,5 @@
 let sessionStopped = true;
-
+let sessionLoopTimeout;
 
 function sessionLoop()
 {
@@ -13,7 +13,7 @@ function sessionLoop()
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 
-    setTimeout(() => {  sessionLoop(); }, 1000);
+    sessionLoopTimeout = setTimeout(() => {  sessionLoop(); }, 1000);
 }
 
 const FULL_DASH_ARRAY = 283;

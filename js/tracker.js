@@ -4,10 +4,6 @@ let pointsCopy;
 
 function startSession()
 {
-    startTimer();
-    console.log(activeUser.points);
-    pointsCopy = activeUser.points
-    console.log("kopi" + String(pointsCopy))
     if (activeUser.points == 0 || activeUser.points == undefined)
     {
         window.alert("Du har ikke nok point!");
@@ -16,6 +12,11 @@ function startSession()
     }
 
     switchTo("inSession");
+
+    startTimer();
+    console.log(activeUser.points);
+    pointsCopy = activeUser.points
+    console.log("kopi" + String(pointsCopy))
 
     sessionStopped = false;
     sessionLoop();
@@ -61,6 +62,8 @@ function stopSession()
     timeLeft = TIME_LIMIT;
     timerInterval = null;
     remainingPathColor = COLOR_CODES.info.color;
+
+    clearTimeout(sessionLoopTimeout);
 
     web.soff();
 }
