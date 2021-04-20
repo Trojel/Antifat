@@ -4,6 +4,7 @@ let pointsCopy;
 
 function startSession()
 {
+    startTimer();
     console.log(activeUser.points);
     pointsCopy = activeUser.points
     console.log("kopi" + String(pointsCopy))

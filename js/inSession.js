@@ -39,7 +39,7 @@ const COLOR_CODES = {
 };
 
 
-const TIME_LIMIT = 20;
+let TIME_LIMIT;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -69,16 +69,17 @@ document.getElementById("app").innerHTML = `
 </div>
 `;
 
-startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
 }
 
 function startTimer() {
+  TIME_LIMIT = activeUser.points;
   timerInterval = setInterval(() => {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
+    console.log("kopi: " + pointsCopy)
     document.getElementById("base-timer-label").innerHTML = formatTime(
       timeLeft
     );
