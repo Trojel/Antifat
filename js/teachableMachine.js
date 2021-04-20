@@ -70,6 +70,32 @@ async function predict() {
         // labelContainer.childNodes[i].innerHTML = classPrediction;
         //console.log(prediction)   
     }
+
+    for (position of prediction)
+    {
+        if (position.probability > 0.9)
+        {
+            console.log("proba");
+            switch (position.className)
+            {
+                case "squat stående":
+                    break;
+
+                case "squat siddende":
+                    break;
+
+                case "armbøjning bøj":
+                    pushup.down();
+                    break;
+
+                case "armbøjning strakt":
+                    pushup.up();
+                    break;
+            }
+        }
+    }
+
+    // console.log(prediction);
     squat()
     activeUser.points = squatCount;
 
