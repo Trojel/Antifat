@@ -4,10 +4,10 @@ let pointsCopy;
 
 function startSession()
 {
-    console.log(points);
-    pointsCopy = points
+    console.log(activeUser.points);
+    pointsCopy = activeUser.points
     console.log("kopi" + String(pointsCopy))
-    if (points == 0 || points == undefined)
+    if (activeUser.points == 0 || activeUser.points == undefined)
     {
         window.alert("Du har ikke nok point!");
         console.log("Du har ikke nok point!");
@@ -20,7 +20,7 @@ function startSession()
     sessionLoop();
 
     let startTime = Date.now();
-    endTime = startTime + points * 10000;
+    endTime = startTime + activeUser.points * 10000;
     console.log(endTime);
 
     web.son();

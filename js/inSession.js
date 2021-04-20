@@ -3,19 +3,19 @@ let sessionStopped = true;
 
 function sessionLoop()
 {
-    if (points == 0 || sessionStopped)
+    if (activeUser.points == 0 || sessionStopped)
     {
         stopSession();
         sessionStopped = false;
         return;
     }
-    points--;
+    activeUser.points--;
 
     document.querySelectorAll(".wallet").forEach(elem => elem.innerHTML = "Point: " + String(activeUser.points));
 
-    document.querySelector(".time").innerHTML = "Time: " + String(points) + "sec";
+    document.querySelector(".time").innerHTML = "Time: " + String(activeUser.points) + "sec";
 
-    console.log(points);
+    console.log(activeUser.points);
 
     setTimeout(() => {  sessionLoop(); }, 1000);
 }
