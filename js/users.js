@@ -13,7 +13,6 @@ function jsonReceived()
     for (let i = 0; i < Object.keys(object.users); i++){
         users[i] = new User(object.users.name, object.useres.score)
     }
-    
 }
 
 class User
