@@ -2,24 +2,24 @@
     "users":
     [
         {
-            "name": "William",
-            "score": 1000
-        },
-        {
             "name": "Oliver",
-            "score": 500
-        },
-        {
-            "name": "Neger",
-            "score": 800
-        },
-        {
-            "name": "Adolf",
             "score": 420
         },
         {
-            "name": "x",
-            "score": 50000
+            "name": "Oskar",
+            "score": 69
+        },
+        {
+            "name": "Simon",
+            "score": 8000
+        },
+        {
+            "name": "William",
+            "score": 666
+        },
+        {
+            "name": "Taber",
+            "score": 2
         }
     ]
 }
