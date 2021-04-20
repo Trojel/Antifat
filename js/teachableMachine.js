@@ -42,6 +42,8 @@ async function init() {
     for (let i = 0; i < maxPredictions; i++) { // and class labels
         labelContainer.appendChild(document.createElement("div"));
     }
+
+    squatCount = activeUser.points;
 }
 
 async function loop(timestamp) {
@@ -70,7 +72,7 @@ async function predict() {
         //console.log(prediction)   
     }
     squat()
-    points = squatCount;
+    activeUser.points = squatCount;
 
     // finally draw the poses
     drawPose(pose);
