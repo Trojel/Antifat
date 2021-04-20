@@ -70,3 +70,10 @@ function startTraining()
     switchTo('tm');
     document.querySelector('#startTm').style.display = 'inline-block';
 }
+
+function endTm()
+{
+    switchTo('menu');
+    stopTm = true;
+    webcam.stop();
+}
