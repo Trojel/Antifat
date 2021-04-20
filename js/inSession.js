@@ -40,6 +40,7 @@ let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+let stopTimer = false;
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -73,6 +74,7 @@ function onTimesUp() {
 function startTimer() {
   TIME_LIMIT = activeUser.points;
   timerInterval = setInterval(() => {
+    if (stopTimer) return;
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(

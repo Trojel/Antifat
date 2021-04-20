@@ -22,7 +22,8 @@ function startSession()
 
     let startTime = Date.now();
     endTime = startTime + activeUser.points * 10000;
-    console.log(endTime);
+    
+    stopTimer = false;
 
     web.son();
 }
@@ -52,6 +53,14 @@ function startSession()
 function stopSession()
 {
     switchTo("menu");
+    
     sessionStopped = true;
+    stopTimer = true;
+    clearInterval(timerInterval);
+    timePassed = 0;
+    timeLeft = TIME_LIMIT;
+    timerInterval = null;
+    remainingPathColor = COLOR_CODES.info.color;
+
     web.soff();
 }
