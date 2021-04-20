@@ -16,7 +16,7 @@
 #scoreboard
 {
     grid-column: 3 / 4;
-    grid-row: 2 / 3;
+    grid-row-start: 2;
     color: white;
     text-align: center;
     background-color: rgba(255, 255, 255, .2);
@@ -24,6 +24,7 @@
     margin-top: 0;
     border-radius: var(--borderRadius);
     box-shadow: var(--boxShadow);
+    height: auto;
 }
 
 #scoreboard > table
