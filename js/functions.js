@@ -43,13 +43,15 @@ function submitName()
         {
             userExists = true;
             activeUser = users.find(user => user.name === name);
+            document.querySelector("#selectDifficulty > select").value = activeUser.difficulty;
             break;
         }
     }
 
     if (!userExists)
     {
-        activeUser = new User(name);
+        let difficulty = parseInt(document.querySelector("#selectDifficulty > select").value);
+        activeUser = new User(name, difficulty);
         users.push(activeUser);
     }
 
@@ -62,7 +64,7 @@ function submitName()
 
 function submitDifficulty()
 {
-    let difficulty = document.querySelector("#selectDifficulty > select").value;
+    let difficulty = parseInt(document.querySelector("#selectDifficulty > select").value);
     activeUser.difficulty = difficulty;
 }
 
@@ -76,6 +78,7 @@ function startTraining()
 
     switchTo('tm');
     document.querySelector('#startTm').style.display = 'inline-block';
+    activeUser.startTraining();
 }
 
 function endTm()

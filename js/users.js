@@ -76,10 +76,9 @@ class User
 
         this.sessionPoints = ((this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount) * this.multiplier) / parseInt(this.difficulty);
         this.points = ((this.squatCount + this.pushupCount) * this.multiplier) / parseInt(this.difficulty);
-        console.log(this.difficulty);
     }
 
-    startSession()
+    startTraining()
     {
         this.sessionSquatCount = this.squatCount;
         this.sessionPushupCount = this.pushupCount;

@@ -4,6 +4,15 @@
     grid-template-rows: auto calc(var(--btnHeight) + 2 * var(--space));
 }
 
+#tm .multiplier
+{
+    position: absolute;
+    top: 75%;
+    left: 2%;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+}
+
 #tm .btnContainer
 {
     grid-row: 2 / 3;
