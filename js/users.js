@@ -12,7 +12,7 @@ setTimeout(() => jsonReceived(), 1000)
 
 function jsonReceived()
 {
-    if (object === undefined)
+    if (object == undefined)
     {
         console.log("JSON not received!");
         return;
@@ -22,7 +22,7 @@ function jsonReceived()
 
     for (let i = 0; i < object.users.length; i++)
     {
-        users[i] = new User(object.users[i].name, object.users[i].squatCount, object.users[i].pushupCount);
+        users[i] = new User(object.users[i].name, object.users[i].difficulty, object.users[i].squatCount, object.users[i].pushupCount);
     }
 
     initializeScoreboard();
@@ -52,22 +52,37 @@ function initializeScoreboard()
 
 class User
 {
-    constructor(name, squatCount, pushupCount)
+    constructor(name, difficulty, squatCount, pushupCount)
     {
         this.name = name;
+        this.difficulty = difficulty;
         this.squatCount = squatCount || 0;
         this.pushupCount = pushupCount || 0;
-        this.difficulty;
+
+        this.sessionStartSquatCount = this.squatCount;
+        this.sessionStartPushupCount = this.pushupCount;
+
+        this.sessionPoints = 0;
+        this.multiplier = 1;
+
         this.points;
         this.updatePoints();
     }
 
     updatePoints()
     {
-        let squatPoints = this.squatCount ** 0.9;
-        let pushupPoints = this.pushupCount ** 0.9;
+        this.multiplier = Math.floor((this.sessionPoints * 0.05 + 1) * 2) / 2;
+        document.querySelector(".multiplier").innerHTML = `Multiplier: ${this.multiplier}`;
 
-        this.points = Math.floor(squatPoints + pushupPoints);
+        this.sessionPoints = ((this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount) * this.multiplier) / parseInt(this.difficulty);
+        this.points = ((this.squatCount + this.pushupCount) * this.multiplier) / parseInt(this.difficulty);
+        console.log(this.difficulty);
+    }
+
+    startSession()
+    {
+        this.sessionSquatCount = this.squatCount;
+        this.sessionPushupCount = this.pushupCount;
     }
 }
 

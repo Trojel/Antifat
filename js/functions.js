@@ -62,7 +62,8 @@ function submitName()
 
 function submitDifficulty()
 {
-    activeUser.difficulty = document.querySelector("#selectDifficulty > select").value;
+    let difficulty = document.querySelector("#selectDifficulty > select").value;
+    activeUser.difficulty = difficulty;
 }
 
 function startTraining()

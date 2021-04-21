@@ -128,6 +128,26 @@
     width: 100%;
 }
 
+#selectDifficulty > select > option
+{
+    color: rgb(240, 240, 240);
+}
+
+#selectDifficulty > select > option:nth-child(1)
+{
+    background-color: hsl(100, 60%, 50%);
+}
+
+#selectDifficulty > select > option:nth-child(2)
+{
+    background-color: hsl(45, 60%, 50%);
+}
+
+#selectDifficulty > select > option:nth-child(3)
+{
+    background-color: hsl(0, 60%, 50%);
+}
+
 @media only screen and (max-width: 1000px)
 {
     #menu
