@@ -60,6 +60,8 @@ class User
         
         this.points;
         this.updatePoints();
+
+        this.difficulty;
     }
 
     updatePoints()

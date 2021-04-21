@@ -111,6 +111,21 @@
     margin-bottom: var(--space);
     width: 100%;
     display: none;
+    text-align: center;
+}
+
+#selectDifficulty > label
+{
+    color:rgb(240, 240, 240);
+    width: 100%;
+    line-height: 3rem;
+    text-align: center;
+    margin: auto;
+}
+
+#selectDifficulty > select
+{
+    width: 100%;
 }
 
 @media only screen and (max-width: 1000px)

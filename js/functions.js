@@ -62,7 +62,7 @@ function submitName()
 
 function submitDifficulty()
 {
-    console.log("kick that nigga bitch of the plane");
+    activeUser.difficulty = document.querySelector("#selectDifficulty > select").value;
 }
 
 function startTraining()
