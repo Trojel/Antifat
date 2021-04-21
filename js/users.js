@@ -58,13 +58,11 @@ class User
         this.difficulty = difficulty;
         this.squatCount = squatCount || 0;
         this.pushupCount = pushupCount || 0;
-
-        this.sessionStartSquatCount = this.squatCount;
-        this.sessionStartPushupCount = this.pushupCount;
-
+        
+        this.sessionStartPoints = 0;
         this.sessionPoints = 0;
         this.multiplier = 1;
-
+        
         this.points;
         this.updatePoints();
     }
@@ -74,14 +72,15 @@ class User
         this.multiplier = Math.floor((this.sessionPoints * 0.05 + 1) * 2) / 2;
         document.querySelector(".multiplier").innerHTML = `Multiplier: ${this.multiplier}`;
 
-        this.sessionPoints = ((this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount) * this.multiplier) / parseInt(this.difficulty);
-        this.points = ((this.squatCount + this.pushupCount) * this.multiplier) / parseInt(this.difficulty);
+        // fjerner ikke point
+
+        // this.sessionPoints = ((this.ses) * this.multiplier) / parseInt(this.difficulty);
+        // this.points = 
     }
 
     startTraining()
     {
-        this.sessionSquatCount = this.squatCount;
-        this.sessionPushupCount = this.pushupCount;
+        this.sessionStartPoints = this.points;
     }
 }
 
