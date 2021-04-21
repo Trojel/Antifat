@@ -57,11 +57,9 @@ class User
         this.name = name;
         this.squatCount = squatCount || 0;
         this.pushupCount = pushupCount || 0;
-        
+        this.difficulty;
         this.points;
         this.updatePoints();
-
-        this.difficulty;
     }
 
     updatePoints()
