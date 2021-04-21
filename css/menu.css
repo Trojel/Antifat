@@ -104,6 +104,15 @@
     display: none;
 }
 
+#selectDifficulty
+{
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: var(--space);
+    width: 100%;
+    display: none;
+}
+
 @media only screen and (max-width: 1000px)
 {
     #menu

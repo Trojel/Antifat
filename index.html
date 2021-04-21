@@ -38,6 +38,13 @@
                 <button id="startSession" class = "btn" onclick="startSession()">
                     Start Spilsession
                 </button>
+                <form id="selectDifficulty" onchange="submitDifficulty()" onsubmit="submitDifficulty()" action="javascript:void(0);">
+                    <select class="btn">
+                        <option value="d1">Nem</option>
+                        <option value="d2">Mellem</option>
+                        <option value="d3">Svær</option>
+                    </select>
+                </form>>
             </div>
             <p class = "wallet">Point: 0</p>
         </page>
@@ -66,7 +73,6 @@
         <script src="js/http.js"></script>
         <script src="js/squat.js"></script>
         <script src="js/armboejning.js"></script>
-        <script src="js/tracker.js"></script>
         <script src="js/teachableMachine.js"></script>
         <script src="js/inSession.js"></script>
         <script src="js/functions.js"></script>
