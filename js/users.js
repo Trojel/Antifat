@@ -71,7 +71,7 @@ class User
 
     updatePoints()
     {
-        this.multiplier = Math.floor((this.sessionPoints * 0.01 + 1) * 2) / 2;
+        this.multiplier = Math.floor((this.sessionPoints * 0.001 + 1) * 2) / 2;
         document.querySelector(".multiplier").innerHTML = `Multiplier: ${this.multiplier}`;
 
         // fjerner ikke point
