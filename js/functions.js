@@ -83,14 +83,13 @@ function startTraining()
 
 function endTm()
 {
-    if (webcam != undefined)
+    stopTm = true;
+    switchTo('menu');
+    setTimeout(() => document.querySelectorAll("page").forEach(elem => elem.style.backgroundColor = "var(--color1)"), 1000);
+    if (webcam)
     {
         webcam.stop();
     }
-    
-    stopTm = true;
-    switchTo('menu');
-    document.querySelectorAll("page").forEach(elem => elem.style.backgroundColor = "var(--color1)");
 }
 
 let time = new Date();
