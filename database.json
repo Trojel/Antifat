@@ -2,7 +2,7 @@
     "users":
     [
         {
-            "name": "🍪🛴📍💎🌜®️ får 🕛",
+            "name": "Oliver får 🕛",
             "difficulty": 3,
             "squatCount": 420,
             "pushupCount": 69
@@ -24,12 +24,6 @@
             "difficulty": 1,
             "squatCount": 2,
             "pushupCount": 5
-        },
-        {
-            "name": "<br>Folk der skriver:<br><br>function myFunc(){<br>}          <br><br>istedet for:<br><br>function myFunc()<br>{          <br>}          <br>",
-            "difficulty": 1,
-            "squatCount": 0,
-            "pushupCount": 0
         }
     ]
 }
