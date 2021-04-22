@@ -41,6 +41,9 @@ let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 let stopTimer = false;
+let hours = timeLeft / 60 ** 2;
+let minutes = timeLeft / 60 - hours * 60;
+let seconds = timeLeft - hours * 60 ** 2 - minutes * 60;
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
@@ -60,12 +63,9 @@ document.getElementById("app").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  <span id="base-timer-label" class="base-timer__label">${hours}:${minutes}:${seconds}</span>
 </div>
 `;
-
 
 function onTimesUp() {
   clearInterval(timerInterval);
@@ -77,9 +77,10 @@ function startTimer() {
     if (stopTimer) return;
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(
-      timeLeft
-    );
+    hours = Math.floor(timeLeft / 60 ** 2);
+    minutes = Math.floor(timeLeft / 60 - hours * 60);
+    seconds = Math.floor(timeLeft - hours * 60 ** 2 - minutes * 60);
+    document.getElementById("base-timer-label").innerHTML = `${hours}:${minutes}:${seconds}`;
     setCircleDasharray();
     setRemainingPathColor(timeLeft);
 
