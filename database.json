@@ -16,14 +16,14 @@
         {
             "name": "Simon",
             "difficulty": 2,
-            "squatCount": 28954,
+            "squatCount": 666,
             "pushupCount": 4
         },
         {
             "name": "William",
             "difficulty": 1,
-            "squatCount": 666,
-            "pushupCount": 90
+            "squatCount": 2,
+            "pushupCount": 5
         },
         {
             "name": "<br>Folk der skriver:<br><br>function myFunc(){<br>}          <br><br>istedet for:<br><br>function myFunc()<br>{          <br>}          <br>",

@@ -59,6 +59,8 @@ class User
         this.squatCount = squatCount || 0;
         this.pushupCount = pushupCount || 0;
         
+        this.sessionStartSquatCount = 0;
+        this.sessionStartPushupCount = 0;
         this.sessionStartPoints = 0;
         this.sessionPoints = 0;
         this.multiplier = 1;
@@ -74,12 +76,15 @@ class User
 
         // fjerner ikke point
 
-        // this.sessionPoints = ((this.ses) * this.multiplier) / parseInt(this.difficulty);
-        // this.points = 
+        let sessionRawPoints = this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount;
+        this.sessionPoints = sessionRawPoints * 50 / this.difficulty;
+        this.points = this.sessionStartPoints + this.sessionPoints;
     }
 
     startTraining()
     {
+        this.sessionStartSquatCount = this.squatCount;
+        this.sessionStartPushupCount = this.pushupCount;
         this.sessionStartPoints = this.points;
     }
 }
