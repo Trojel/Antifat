@@ -78,7 +78,7 @@ class User
 
         let sessionRawPoints = this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount;
         this.sessionPoints = sessionRawPoints * 50 / this.difficulty;
-        this.points = this.sessionStartPoints + this.sessionPoints;
+        this.points = Math.floor(this.sessionStartPoints + this.sessionPoints);
     }
 
     startTraining()
