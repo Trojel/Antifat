@@ -2,7 +2,7 @@
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/pose
 
 // the link to your model provided by Teachable Machine export panel
-const URL = "https://teachablemachine.withgoogle.com/models/TKHflD_NM/";
+const URL = "https://teachablemachine.withgoogle.com/models/KcUHN8LkL/";
 let model, webcam, ctx, labelContainer, maxPredictions;
 let web = new Web();
 let squatSiddendeCheck = false
