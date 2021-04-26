@@ -20,6 +20,7 @@
             squatSiddendeCheck = false;
             if (!squatCheck){
                 activeUser.squatCount++;
+                activeUser.exerciseDone();
                 activeUser.updatePoints();
             }
             squatCheck = true

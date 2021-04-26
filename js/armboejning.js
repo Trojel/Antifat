@@ -19,6 +19,7 @@ class Pushup
             this.downCheck = false;
             
             activeUser.pushupCount++;
+            activeUser.exerciseDone();
             activeUser.updatePoints();
         }
     }

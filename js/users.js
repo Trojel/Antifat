@@ -69,13 +69,15 @@ class User
         this.updatePoints();
     }
 
+    exerciseDone()
+    {
+        this.sessionPoints += 50 * this.multiplier / this.difficulty;
+    }
+
     updatePoints()
     {
         this.multiplier = Math.floor((this.sessionPoints * 0.001 + 1) * 2) / 2;
         document.querySelector(".multiplier").innerHTML = `Multiplier: ${this.multiplier}`;
-
-        let sessionRawPoints = this.squatCount - this.sessionStartSquatCount + this.pushupCount - this.sessionStartPushupCount;
-        this.sessionPoints = sessionRawPoints * 50 / this.difficulty;
         this.points = Math.floor(this.sessionStartPoints + this.sessionPoints);
     }
 
